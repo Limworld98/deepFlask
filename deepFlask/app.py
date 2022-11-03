@@ -5,17 +5,14 @@ app = Flask(__name__)
 def index():
     return render_template('mainpage.html')
     
-@app.route('/info')
-def info():
-    return render_template('info.html')
+@app.route('/userinput')
+def userinput():
+    return render_template('userinput.html')
 
-@app.route('/userLogin', methods = ['POST'])
-def userLogin():
-    user = request.get_json()#json 데이터를 받아옴
-    return jsonify(user)# 받아온 데이터를 다시 전송
- 
-@app.route('/environments/<language>')
-def environments(language):
-    return jsonify({"language":language})
- 
+@app.route('/output', methods=['GET','POST'])
+def output():
+    if request.method == 'POST':
+        identifier = request.form['identifier']
+        print(identifier)
+    return render_template('output.html')
  
