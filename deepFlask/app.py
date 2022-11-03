@@ -1,4 +1,6 @@
 from flask import Flask, render_template, jsonify, request
+from EffiModule import extract500 
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,6 +15,6 @@ def userinput():
 def output():
     if request.method == 'POST':
         identifier = request.form['identifier']
-        print(identifier)
+        extract500(identifier)
     return render_template('output.html')
  
