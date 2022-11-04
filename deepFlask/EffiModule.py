@@ -6,8 +6,8 @@ import csv
 
 f = open('pillTableDB500.csv','rt',encoding='UTF-8')
 rdr = csv.reader(f)
-
+identList = []
 def extract500(identifier) :
     for line in rdr :
         if (identifier == line[1] or identifier == line[2]) :
-            print(line[0])
+            identList.append(line[0])
