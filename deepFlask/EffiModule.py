@@ -24,10 +24,6 @@ def extract500(identifier):
             identList.append(line[0])
 
 
-for idents in identList:
-        print(idents)
-    return identList
-
 
 def setup_parser():
     parser = argparse.ArgumentParser()
