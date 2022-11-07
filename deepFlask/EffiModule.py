@@ -11,3 +11,7 @@ def extract500(identifier) :
     for line in rdr :
         if (identifier == line[1] or identifier == line[2]) :
             identList.append(line[0])
+
+    print(identList)
+    # for ident in identList :
+    #     print(ident)
