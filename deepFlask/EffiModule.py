@@ -11,9 +11,7 @@ from PIL import Image
 import torch
 import argparse
 
-# app.py에서 identifier 입력 받은 후 (완)
-# 받은 identifier로 500DB에서 표시앞 또는 표시뒤로 추출 (comp)
-# 추출 내용을 모델로 전달
+
 
 f = open("pillTableDB500.csv", "rt", encoding="UTF-8")
 rdr = csv.reader(f)
@@ -25,12 +23,8 @@ def extract500(identifier):
         if identifier == line[1] or identifier == line[2]:
             identList.append(line[0])
 
-<<<<<<< HEAD
-    print(identList)
-    # for ident in identList :
-    #     print(ident)
-=======
-    for idents in identList:
+
+for idents in identList:
         print(idents)
     return identList
 
@@ -113,4 +107,3 @@ def validate(class_list, model_path, data_path):
         pred_class = labels[int(output_label.indices)]  # final result
         print(pred_class)
     return pred_class
->>>>>>> 98e608e9fa8db1d25f929571b507345505ca5103
