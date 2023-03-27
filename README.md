@@ -12,3 +12,7 @@ Python / Flask <br><br>
 <h2>사용 영상</h2><br>
 
 ![running](https://user-images.githubusercontent.com/38485221/227778155-35eec83b-db87-43a4-8a4c-0e6157ba99fa.gif)
+
+
+<h2>논문</h2><br>
+http://www.riss.kr/link?id=A108387739
